@@ -8,5 +8,19 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
-
+  myTitle : string = "This is a sample app";
+  mySubtitle : string = "Let's learn ionic framework";
+  showlink : boolean = true; 
+  Courses : any[] = [
+    {id: 1, name: 'Week 1'},
+    {id: 2, name: 'Week 2'},
+    {id: 3, name: 'Week 3'},
+    {id: 4, name: 'Week 4'},
+    {id: 5, name: 'Week 5'}
+  ];
+  courseLink : string = "https://www.google.com/";
+  showCourseName(courseName : string) {
+    alert(courseName);
+  }
+  comment : string = ""
 }

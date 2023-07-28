@@ -14,7 +14,18 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <h1>{{myTitle}}</h1>
+      <h3>{{mySubtitle}}</h3>
+      <a *ngIf="showlink" [href] = "courseLink">Tutorial link</a>
+      <div *ngFor="let course of Courses">
+        <a style = "text-decoration: underline;color: green;"(click)="showCourseName(course.name)" >
+          {{course.name}}
+        </a>
+      </div>
+      <div>
+        <label for="comment">Comment:</label>
+        <input type="text" name="comment" [(ngModel)]="comment"/>
+        <p style = "color: black; font-size: larger;font-weight: bolder;">{{comment}}</p>
+      </div>
   </div>
 </ion-content>
